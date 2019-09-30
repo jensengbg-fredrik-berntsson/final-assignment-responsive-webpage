@@ -17,6 +17,7 @@
 body {
 background: linear-gradient(to top, #2c3e50, #899291); 
 }
+
 /** Kör en grid som default på allt som ligger i wrappern.
 lätt att styla och kör flex på de delar som det används på istället.
 allt lägger sig snygg redan från början.*/
@@ -24,6 +25,7 @@ allt lägger sig snygg redan från början.*/
   display: grid;
   background: var(--light);
 }
+
 /** Då jag vill köra samma typsnitt och styling på de olika
 headings och paragrafer lägger jag de löst här**/
 h1 {
@@ -44,6 +46,7 @@ p, footer {
   font-weight: 500;
   letter-spacing: 0.06rem;
 }
+
 /** Styling för logo och nav på alla sidor **/
 .topnav {
   display: grid;
@@ -66,7 +69,9 @@ p, footer {
 
 .topnav ul a:hover {
   color: var(--silver);
+  transition: ease-in;
 }
+
 .topnav ul a {
   text-decoration: none;
   color: var(--blue);
@@ -76,11 +81,13 @@ p, footer {
 .active {
   opacity: 0.8;
 }
+
 /** Logan för hemsidan **/
 .fa-dyalog {
   grid-area: logo;
   opacity: 0.8; 
 }
+
 /** Design för blocket showcase på samtliga sidor **/
 .showcase {
   display: flex;
@@ -102,9 +109,11 @@ p, footer {
 .showcase h1 {
   margin: 1rem 0rem;
 }
+
 .showcase h4 {
   margin: 0rem 1rem;
 }
+
 /** Lägger in stylingen för knappen här så samma styling används
 på sidan contact för skicka meddelande knappen.
 just denna knapp blir inte synlig förens skärmens storlek når 800px
@@ -126,14 +135,17 @@ då denna knapp skall användas som nerladdning för pc variant av appen. **/
   /** För att gömma knappen i mobil läge **/
   display:none;
 }
+
 .btn:hover {
   background: var(--silver);
   color: var(--black);
+  transition: ease-in;
 }
 
 .btn i {
   padding: 0 1rem 0 0;
 }
+
 .download-app img{
   flex-direction: row;
   max-width: 10rem;
@@ -161,6 +173,7 @@ då denna knapp skall användas som nerladdning för pc variant av appen. **/
   text-align: center;
   border-bottom: 0.1rem solid;
 }
+
 .box-image {
   justify-self: center;
   width: 98%;
@@ -168,6 +181,7 @@ då denna knapp skall användas som nerladdning för pc variant av appen. **/
   border-radius: 0 0 1rem 1rem;
   box-shadow: var(--shadow);
 }
+
 .box-text footer{
   align-self: center;
   text-align: center;
@@ -175,6 +189,7 @@ då denna knapp skall användas som nerladdning för pc variant av appen. **/
   border-bottom: 0.1rem solid;
   margin: 0rem 0rem 1rem;
 }
+
 .box-text footer a {
   color: var(--white);
   text-decoration: none;
@@ -190,12 +205,14 @@ footer {
   justify-content: space-around;
   margin: 5rem 0rem 0rem;
 }
+
 /** Ankarlänk för att komma till toppen av sidan, id behövs då istället
 för class.**/
 #to-top{
   color:var(--white);
   margin:1rem;
 }
+
 .partners {
   display: flex;
   flex-direction: row;
@@ -206,6 +223,7 @@ för class.**/
 .partners i {
   margin: 1rem 0.5rem 2rem;
 }
+
 /** Design för About Page **/
 .about-text {
   display: flex;
@@ -226,8 +244,7 @@ för class.**/
 }
 
 
-/**Design för Contact**/
-
+/** Design för Contact page**/
 .contact{
   height: 80vh;
   color: var(--white);
@@ -248,6 +265,7 @@ för class.**/
 .contact-form h4, p{
   margin: 1.5rem;
 }
+
 .contact button {
   display:block;
 }
@@ -289,9 +307,11 @@ form textarea {
     flex-direction: column;
     justify-content: center;
   }
+
 /** Styling för sidan index **/
   .box {
     grid-template-columns: 1fr 1fr;
+    grid-template-rows: 1fr;
   }
 
   .box-text {
@@ -305,19 +325,21 @@ form textarea {
     width: 100%;
     margin-top: 0;
     border-radius: 0rem 1rem 1rem 0rem;
-    box-shadow: none;
     box-shadow: var(--shadow);
   }
+
   /** Här vill jag få fram knappen igen för pc nedladdnind
   så kör en display:block för att få fram den **/
   .btn{
     display:block;
   }
+
   /** Här vill jag få bort app nerladdning så kör en display:none
   för att få bort den **/
   .download-app {
     display:none;
   }
+
  /** Vill få till en layout dör varannan box kör row-reverse, 
  väljer därför att köra varannan genom att vrida på (odd) **/
   .box:nth-child(odd) {
@@ -325,6 +347,7 @@ form textarea {
     flex-direction: row-reverse;
     max-height: 100%;
   }
+
 /** För att få till så att bilderna håller sig i rätt storlekar 
 sätter jag max och min width på 50% **/
   .box:nth-child(odd) .box-image {
@@ -345,20 +368,23 @@ sätter jag max och min width på 50% **/
     max-width: 34rem;
     min-width: 10rem;  
   }
-  /** För att flytta över alla boxar (varannan) till höger **/
+
+  /** För att flytta över box(ar) (varannan) till höger **/
   .right-box {
     display: flex;
     flex-direction: column;
     align-items: flex-end;
   }
-  /** Design för Contact **/
+
+  /** Design för Contact page **/
   .contact-form{
     max-width:45rem;
     box-shadow: var(--shadow);
   }
  
-  /**För att få bilderna responsiva i chrome
-  utan att aspect ratio ändrar storleken automatiskt**/
+  /** För att få bilderna responsiva i chrome
+  utan att aspect ratio ändrar storleken automatiskt.
+  Förstör dock i firefox **/
   @media screen and (-webkit-min-device-pixel-ratio: 0) {
     .box-image {
       min-height: 24rem;
