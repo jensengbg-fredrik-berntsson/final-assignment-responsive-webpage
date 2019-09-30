@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <title>App</title>
+    <link rel="stylesheet" type="text/css" href="css/style.css" />
+    <link
+      href="https://fonts.googleapis.com/css?family=Courgette|Montserrat&display=swap"
+      rel="stylesheet"
+    />
+    <script
+      src="https://kit.fontawesome.com/3da16d79ca.js"
+      crossorigin="anonymous"
+    ></script>
+  </head>
+  <body>
+    <div class="wrapper">
+      <!--Header inkluderar menyn och logo-->
+      <header class="header">
+        <nav class="topnav" id="top">
+          <i class="fab fa-dyalog fa-2x"></i>
+          <ul>
+            <a href="index.html" class="active">Home</a>
+            <a href="index.html">Guide</a>
+            <a href="pages/contact.html">Contact</a>
+            <a href="pages/about.html">About</a>
+          </ul>
+        </nav>
+        <section class="showcase">
+          <!--Rubrik, paragraf och knapp längst upp på sidan i showcaset-->
+          <h1>D&D Builder</h1>
+          <h4>Download the app and start using D&D Builder for free today!</h4>
+          <button type="button" class="download">
+            <i class="fas fa-download"></i> Start the download
+          </button>
+          <div class="download-app">
+            <a href="https://play.google.com/store?hl=sv">
+              <img src="img/googleplay.png" alt="Google" class="download-app"
+            /></a>
+            <a href="https://www.apple.com/se/ios/app-store/">
+              <img src="img/appstore.png" alt="Apple" class="download-app" />
+            </a>
+          </div>
+        </section>
+      </header>
+      <!--Allt innehåll på sidan förutom första blocket och footer-->
+      <main>
+        <!--4st likadana boxar för mellersta blocket på sidan-->
+        <section class="main-content">
+          <!--Använder mig utan article då samma styling kommer gälla för samtliga boxar-->
+          <!--Article 1-->
+          <article class="box">
+            <div class="box-text">
+              <h2>Easy</h2>
+              <p>
+                Lorem ipsum dolor, sit amet consectetur adipisicing elit.
+                Voluptate, asperiores aut perferendis ipsum harum nihil in
+                consectetur odit expedita corporis?
+              </p>
+              <p class="read-more"><a href="#">Read more</a></p>
+            </div>
+            <img
+              src="img/undraw_a_moment_to_relax_bbpa.png"
+              alt="Relaxing"
+              class="box-image"
+            />
+          </article>
+          <!--Article 2-->
+          <article class="box">
+            <div class="box-text">
+              <h2>Drag and Drop</h2>
+              <p>
+                Lorem ipsum dolor, sit amet consectetur adipisicing elit.
+                Voluptate, asperiores aut perferendis ipsum harum nihil in
+                consectetur odit expedita corporis?
+              </p>
+              <p class="read-more"><a href="#">Read more</a></p>
+            </div>
+            <img
+              src="img/1undraw_drag_5i9w.png"
+              alt="Drag and Drop"
+              class="box-image"
+            />
+          </article>
+          <!--Article 3-->
+          <article class="box">
+            <div class="box-text">
+              <h2>Features</h2>
+              <p>
+                Lorem ipsum dolor, sit amet consectetur adipisicing elit.
+                Voluptate, asperiores aut perferendis ipsum harum nihil in
+                consectetur odit expedita corporis?
+              </p>
+              <p class="read-more"><a href="#">Read more</a></p>
+            </div>
+            <img
+              src="img/1undraw_like_dislike_1dfj.png"
+              alt="Features"
+              class="box-image"
+            />
+          </article>
+          <!--Article 4-->
+          <article class="box">
+            <div class="box-text">
+              <h2>Responsive</h2>
+              <p>
+                Lorem ipsum dolor, sit amet consectetur adipisicing elit.
+                Voluptate, asperiores aut perferendis ipsum harum nihil in
+                consectetur odit expedita corporis?
+              </p>
+              <p class="read-more"><a href="#">Read more</a></p>
+            </div>
+            <img
+              src="img/1undraw_web_devices_ad58.png"
+              alt="Responsive"
+              class="box-image"
+            />
+          </article>
+        </section>
+      </main>
+      <!--Nedersta blocket-->
+      <footer>
+        <a href="#top"><i class="fas fa-arrow-up" id="to-top"></i> </a>
+        <h4>Partners</h4>
+        <div class="partners">
+          <i class="fas fa-microchip">Microchip</i>
+          <i class="fas fa-network-wired">Connect</i>
+          <i class="fas fa-object-ungroup">Designer</i>
+        </div>
+      </footer>
+    </div>
+  </body>
+</html>
