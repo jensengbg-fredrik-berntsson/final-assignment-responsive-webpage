@@ -37,9 +37,8 @@
           </h4>
         </section>
         <section class="main-content">
-          <!--Väljer att göra divar då jag inte vill placera dessa på samma sätt som på main. 
-            skulle väll egentligen kört med articles-->
-          <div class="about-text">
+          <!-- Skall ha 3 lkikkadana boxar på sidan här så väljer att lägga dom som articles-->
+          <article class="about-text">
             <h1>Who are we?</h1>
             <p>
               Lorem ipsum dolor sit amet consectetur adipisicing elit. Doloribus
@@ -48,11 +47,12 @@
               aspernatur, incidunt assumenda laboriosam optio error nam debitis
               eos enim nostrum porro blanditiis similique.
             </p>
-          </div>
-          <!--Iochmen att jag vill enbart flytta över 1 av rutorna till höger kör jag en extra div här.
-          skulle jag lägga till en fjärde ruta kör jag höger på den också så att det blir varannan.-->
-          <div class="right">
-            <div class="about-text">
+          </article>
+          <!--Iochmed att jag vill enbart flytta över 1 av rutorna (varannan som temat är på sidan)
+             till höger kör jag en egen div öven det article elementet här för att placera den annorlunda.
+          skulle jag lägga till en fjärde ruta kör jag samma div på den också så att det blir varannan.-->
+          <div class="right-box">
+            <article class="about-text">
               <h1>Why use us?</h1>
               <p>
                 Lorem ipsum dolor sit amet consectetur adipisicing elit.
@@ -61,9 +61,9 @@
                 facilis earum aspernatur, incidunt assumenda laboriosam optio
                 error nam debitis eos enim nostrum porro blanditiis similique.
               </p>
-            </div>
+            </article>
           </div>
-          <div class="about-text">
+          <article class="about-text">
             <h1>What we do.</h1>
             <p>
               Lorem ipsum dolor sit amet consectetur adipisicing elit. Doloribus
@@ -72,18 +72,21 @@
               aspernatur, incidunt assumenda laboriosam optio error nam debitis
               eos enim nostrum porro blanditiis similique.
             </p>
-          </div>
+          </article>
         </section>
       </main>
       <!--Nedersta blocket-->
       <footer>
-        <a href="#top"><i class="fas fa-arrow-up" id="to-top"></i> </a>
-        <h4>Partners</h4>
-        <div class="partners">
-          <i class="fas fa-microchip">Microchip</i>
-          <i class="fas fa-network-wired">Connect</i>
-          <i class="fas fa-object-ungroup">Designer</i>
-        </div>
+          <a href="#top"><i class="fas fa-arrow-up" id="to-top"></i> </a>
+          <h4>Partners</h4>
+          <!-- Placerar en div här då jag vill kunna styla layouten annorlunda på fontsen som
+          representerar partners-->
+          <div class="partners">
+            <i class="fas fa-microchip">Microchip</i>
+            <i class="fas fa-network-wired">Connect</i>
+            <i class="fas fa-object-ungroup">Designer</i>
+          </div>
+        </footer>
       </footer>
     </div>
   </body>
