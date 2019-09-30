@@ -39,6 +39,8 @@
         <!--Då denna sidan skall ha ett helt eget layout med enbart en centrerad ruta kör jag en 
           separat section på denna sidan-->
         <section class="contact">
+          <!-- Lägger en div här då jag vill kunna styla det i boxen separat. sektionen får andra värden
+          så som tex höjd på sidan och det vill jag inte ha på själva boxen.-->
           <div class="contact-form">
             <h4>Support</h4>
             <p>If you have any questions don't hesitate contacting us!</p>
@@ -47,21 +49,23 @@
               <input type="text" name="email" />
               <label for="message" class="label">Your message</label>
               <textarea placeholder="Whats on your mind?"></textarea>
-              <button type="submit" class="download">send message</button>
+              <button type="submit" class="btn">send message</button>
             </form>
           </div>
         </section>
       </main>
       <!--Nedersta blocket-->
       <footer>
-        <a href="#top"><i class="fas fa-arrow-up" id="to-top"></i></a>
-        <h4>Partners</h4>
-        <div class="partners">
-          <i class="fas fa-microchip">Microchip</i>
-          <i class="fas fa-network-wired">Connect</i>
-          <i class="fas fa-object-ungroup">Designer</i>
-        </div>
-      </footer>
+          <a href="#top"><i class="fas fa-arrow-up" id="to-top"></i> </a>
+          <h4>Partners</h4>
+          <!-- Flacerar en div här då jag vill kunna styla layouten annorlunda på fontsen som
+          representerar partners-->
+          <div class="partners">
+            <i class="fas fa-microchip">Microchip</i>
+            <i class="fas fa-network-wired">Connect</i>
+            <i class="fas fa-object-ungroup">Designer</i>
+          </div>
+        </footer>
     </div>
   </body>
 </html>

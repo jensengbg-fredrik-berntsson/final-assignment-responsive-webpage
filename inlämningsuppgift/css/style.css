@@ -15,15 +15,17 @@
 }
 
 body {
-background: linear-gradient(to top, #2c3e50, #e8f0ef); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
-
+background: linear-gradient(to top, #2c3e50, #899291); 
 }
-
+/** Kör en grid som default på allt som ligger i wrappern.
+lätt att styla och kör flex på de delar som det används på istället.
+allt lägger sig snygg redan från början.*/
 .wrapper {
   display: grid;
   background: var(--light);
 }
-
+/** Då jag vill köra samma typsnitt och styling på de olika
+headings och paragrafer lägger jag de löst här**/
 h1 {
   font-size: 3rem;
   font-family: "Courgette", cursive;
@@ -36,13 +38,13 @@ h2, h4{
   opacity: 0.9;
 }
 
-p {
+p, footer {
   font-size: 1rem;
   font-family: "Montserrat", sans-serif;
   font-weight: 500;
   letter-spacing: 0.06rem;
 }
-/**Styling för logo och nav på alla sidor**/
+/** Styling för logo och nav på alla sidor **/
 .topnav {
   display: grid;
   grid-area: nav;
@@ -74,12 +76,12 @@ p {
 .active {
   opacity: 0.8;
 }
-/**Logan för hemsidan**/
+/** Logan för hemsidan **/
 .fa-dyalog {
   grid-area: logo;
   opacity: 0.8; 
 }
-/**Design för blocket showcase**/
+/** Design för blocket showcase på samtliga sidor **/
 .showcase {
   display: flex;
   width: 100%;
@@ -95,7 +97,6 @@ p {
   text-shadow: 3px 4px 5px #000;
   box-shadow: var(--shadow);
   margin: 0rem 0rem 5rem;
-  
 }
 
 .showcase h1 {
@@ -104,8 +105,11 @@ p {
 .showcase h4 {
   margin: 0rem 1rem;
 }
-
-.download {
+/** Lägger in stylingen för knappen här så samma styling används
+på sidan contact för skicka meddelande knappen.
+just denna knapp blir inte synlig förens skärmens storlek når 800px
+då denna knapp skall användas som nerladdning för pc variant av appen. **/
+.btn {
   align-self: center;
   margin: 1rem 0rem;
   width: max-content;
@@ -119,22 +123,21 @@ p {
   border: 3px solid rgba(0,0,0,0.7);
   border-radius: 0.5rem;
   letter-spacing: 0.06rem;
+  /** För att gömma knappen i mobil läge **/
   display:none;
 }
-.download:hover {
+.btn:hover {
   background: var(--silver);
   color: var(--black);
 }
 
-.download i {
+.btn i {
   padding: 0 1rem 0 0;
 }
 .download-app img{
   flex-direction: row;
   max-width: 10rem;
   max-height: 4rem;
-
-
 }
 
 /**Design för de 4 boxarna på Home sidan**/
@@ -142,7 +145,6 @@ p {
   display: grid;
   margin: 2rem;
   border: 0px solid;
-  
 }
 
 .box-text {
@@ -154,31 +156,31 @@ p {
   color: var(--white);
   border-radius: 1rem 1rem 0 0;
 }
+
 .box-text h2 {
   text-align: center;
   border-bottom: 0.1rem solid;
 }
 .box-image {
-  display: flex;
   justify-self: center;
   width: 98%;
   margin-top: -1rem;
   border-radius: 0 0 1rem 1rem;
   box-shadow: var(--shadow);
 }
-.read-more{
+.box-text footer{
   align-self: center;
   text-align: center;
   text-transform: uppercase;
   border-bottom: 0.1rem solid;
+  margin: 0rem 0rem 1rem;
 }
-.read-more a {
+.box-text footer a {
   color: var(--white);
   text-decoration: none;
 }
 
-
-/**Design för footern**/
+/** Design för footern på samtliga sidor **/
 footer {
   background: var(--blue);
   color: var(--white);
@@ -188,6 +190,8 @@ footer {
   justify-content: space-around;
   margin: 5rem 0rem 0rem;
 }
+/** Ankarlänk för att komma till toppen av sidan, id behövs då istället
+för class.**/
 #to-top{
   color:var(--white);
   margin:1rem;
@@ -202,7 +206,7 @@ footer {
 .partners i {
   margin: 1rem 0.5rem 2rem;
 }
-/**Design för About Page**/
+/** Design för About Page **/
 .about-text {
   display: flex;
   flex-direction: column;
@@ -285,7 +289,7 @@ form textarea {
     flex-direction: column;
     justify-content: center;
   }
-/**Styling för sidan index**/
+/** Styling för sidan index **/
   .box {
     grid-template-columns: 1fr 1fr;
   }
@@ -299,56 +303,55 @@ form textarea {
 
   .box-image {
     width: 100%;
-    min-height: 100%;
     margin-top: 0;
     border-radius: 0rem 1rem 1rem 0rem;
     box-shadow: none;
     box-shadow: var(--shadow);
   }
-.download{
-  display:block;
-}
-.download-app {
-  display:none;
-}
- 
-  article:nth-child(odd) {
+  /** Här vill jag få fram knappen igen för pc nedladdnind
+  så kör en display:block för att få fram den **/
+  .btn{
+    display:block;
+  }
+  /** Här vill jag få bort app nerladdning så kör en display:none
+  för att få bort den **/
+  .download-app {
+    display:none;
+  }
+ /** Vill få till en layout dör varannan box kör row-reverse, 
+ väljer därför att köra varannan genom att vrida på (odd) **/
+  .box:nth-child(odd) {
     display: flex;
     flex-direction: row-reverse;
     max-height: 100%;
   }
-
-  article:nth-child(1) .box-image {
+/** För att få till så att bilderna håller sig i rätt storlekar 
+sätter jag max och min width på 50% **/
+  .box:nth-child(odd) .box-image {
     min-width: 50%;
     max-width: 50%;
     border-radius: 1rem 0rem 0rem 1rem;
   }
 
-  article:nth-child(1) .box-text {
+  .box:nth-child(odd) .box-text {
     border-radius: 0rem 1rem 1rem 0rem;
   }
 
-  article:nth-child(3) .box-image {
-    min-width: 50%;
-    max-width: 50%;
-    border-radius: 1rem 0rem 0rem 1rem;
-  }
-  article:nth-child(3) .box-text {
-    border-radius: 0rem 1rem 1rem 0rem;
-  }
-  /**Styling för sidan about**/
+  /** Styling för sidan about **/
   .about-text {
     display: flex;
+    flex-direction: column;
     margin: 1rem 2rem;
     max-width: 34rem;
     min-width: 10rem;  
   }
-  .right {
+  /** För att flytta över alla boxar (varannan) till höger **/
+  .right-box {
     display: flex;
     flex-direction: column;
     align-items: flex-end;
   }
-  /**Design för Contact**/
+  /** Design för Contact **/
   .contact-form{
     max-width:45rem;
     box-shadow: var(--shadow);

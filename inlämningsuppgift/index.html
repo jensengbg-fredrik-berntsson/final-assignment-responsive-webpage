@@ -16,11 +16,15 @@
     ></script>
   </head>
   <body>
+    <!-- Lägger hela wrappern i en div då jag läst att detta är det bästa/enklaste att köra med-->
     <div class="wrapper">
       <!--Header inkluderar menyn och logo-->
       <header class="header">
         <nav class="topnav" id="top">
           <i class="fab fa-dyalog fa-2x"></i>
+          <!-- Valt att lägga det i en ul trots wc3 varningar. lätt att styla samt använda grid på
+          nav:en och logan. kör grid då jag vill att logan ska vara på samma nivå som texten men inte
+        vara beroende av dom. Logan håller sig nu alltid i vänstra hörnet, perfekt.-->
           <ul>
             <a href="index.html" class="active">Home</a>
             <a href="index.html">Guide</a>
@@ -29,12 +33,16 @@
           </ul>
         </nav>
         <section class="showcase">
-          <!--Rubrik, paragraf och knapp längst upp på sidan i showcaset-->
+          <!--Första stora blocket med rubrik text och nedladdningsknappar som är 
+          beroende av vilken skärmstorlek du kör. stor skärm = nedladdning för pc,
+        liten skärm " nedladdning för appar.-->
           <h1>D&D Builder</h1>
           <h4>Download the app and start using D&D Builder for free today!</h4>
-          <button type="button" class="download">
+          <button type="button" class="btn">
             <i class="fas fa-download"></i> Start the download
           </button>
+          <!-- Lägger en övergripande div här för att  gemensamt styla bilderna lättare,
+             både med position och storlek-->
           <div class="download-app">
             <a href="https://play.google.com/store?hl=sv">
               <img src="img/googleplay.png" alt="Google" class="download-app"
@@ -49,9 +57,12 @@
       <main>
         <!--4st likadana boxar för mellersta blocket på sidan-->
         <section class="main-content">
-          <!--Använder mig utan article då samma styling kommer gälla för samtliga boxar-->
+          <!--Använder mig utan article då samma styling kommer gälla för samtliga boxar.
+          varannan box kommer få elementet grid och varannan flex row-reverse-->
           <!--Article 1-->
           <article class="box">
+            <!-- lägger in en div här för att kunna style texten oberoende utav själva boxen. 
+              detsamma gäller för alla artiklar i denna sektionen-->
             <div class="box-text">
               <h2>Easy</h2>
               <p>
@@ -59,7 +70,7 @@
                 Voluptate, asperiores aut perferendis ipsum harum nihil in
                 consectetur odit expedita corporis?
               </p>
-              <p class="read-more"><a href="#">Read more</a></p>
+              <footer><a href="#">Read more</a></footer>
             </div>
             <img
               src="img/undraw_a_moment_to_relax_bbpa.png"
@@ -76,7 +87,7 @@
                 Voluptate, asperiores aut perferendis ipsum harum nihil in
                 consectetur odit expedita corporis?
               </p>
-              <p class="read-more"><a href="#">Read more</a></p>
+              <footer><a href="#">Read more</a></footer>
             </div>
             <img
               src="img/1undraw_drag_5i9w.png"
@@ -93,7 +104,7 @@
                 Voluptate, asperiores aut perferendis ipsum harum nihil in
                 consectetur odit expedita corporis?
               </p>
-              <p class="read-more"><a href="#">Read more</a></p>
+              <footer><a href="#">Read more</a></footer>
             </div>
             <img
               src="img/1undraw_like_dislike_1dfj.png"
@@ -110,7 +121,7 @@
                 Voluptate, asperiores aut perferendis ipsum harum nihil in
                 consectetur odit expedita corporis?
               </p>
-              <p class="read-more"><a href="#">Read more</a></p>
+              <footer><a href="#">Read more</a></footer>
             </div>
             <img
               src="img/1undraw_web_devices_ad58.png"
@@ -124,6 +135,8 @@
       <footer>
         <a href="#top"><i class="fas fa-arrow-up" id="to-top"></i> </a>
         <h4>Partners</h4>
+        <!-- Flacerar en div här då jag vill kunna styla layouten annorlunda på fontsen som
+        representerar partners-->
         <div class="partners">
           <i class="fas fa-microchip">Microchip</i>
           <i class="fas fa-network-wired">Connect</i>
