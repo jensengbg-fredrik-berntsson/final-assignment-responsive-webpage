@@ -328,9 +328,16 @@ form textarea {
 
   .box-image {
     width: 100%;
+    min-height: 24rem;
     margin-top: 0;
     border-radius: 0rem 1rem 1rem 0rem;
     box-shadow: var(--shadow);
+  }
+  /** För att få bilden att matcha texten i firefox**/
+  @-moz-document url-prefix() {
+    .box-image {
+      min-height: 100%;
+    }
   }
 
   /** Här vill jag få fram knappen igen för pc nedladdnind
@@ -367,11 +374,8 @@ sätter jag max och min width på 50% **/
 
   /** Styling för sidan about **/
   .about-text {
-    display: flex;
-    flex-direction: column;
     margin: 1rem 2rem;
     max-width: 34rem;
-    min-width: 10rem;
   }
 
   /** För att flytta över box(ar) (varannan) till höger **/
@@ -385,13 +389,5 @@ sätter jag max och min width på 50% **/
   .contact-form {
     max-width: 45rem;
     box-shadow: var(--shadow);
-  }
-}
-/** För att få bilderna responsiva i chrome
-  utan att aspect ratio ändrar storleken automatiskt.
-  Förstör dock i firefox som hellre vill ha min-height. **/
-@media screen and (-webkit-min-device-pixel-ratio: 0) {
-  .box-image {
-    min-height: 24rem;
   }
 }
