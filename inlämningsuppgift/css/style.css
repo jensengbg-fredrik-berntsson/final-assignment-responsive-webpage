@@ -15,7 +15,7 @@
 }
 
 body {
-background: linear-gradient(to top, #2c3e50, #899291); 
+  background: linear-gradient(to top, #2c3e50, #899291);
 }
 
 /** Kör en grid som default på allt som ligger i wrappern.
@@ -34,13 +34,15 @@ h1 {
   font-weight: 800;
 }
 
-h2, h4{
+h2,
+h4 {
   font-size: 2rem;
   font-family: "Courgette", cursive;
   opacity: 0.9;
 }
 
-p, footer {
+p,
+footer {
   font-size: 1rem;
   font-family: "Montserrat", sans-serif;
   font-weight: 500;
@@ -71,6 +73,9 @@ p, footer {
   color: var(--silver);
   transition: ease-in;
 }
+.topnav ul li {
+  list-style: none;
+}
 
 .topnav ul a {
   text-decoration: none;
@@ -85,7 +90,7 @@ p, footer {
 /** Logan för hemsidan **/
 .fa-dyalog {
   grid-area: logo;
-  opacity: 0.8; 
+  opacity: 0.8;
 }
 
 /** Design för blocket showcase på samtliga sidor **/
@@ -129,11 +134,11 @@ då denna knapp skall användas som nerladdning för pc variant av appen. **/
   font-size: 1.2rem;
   font-weight: 600;
   color: var(--white);
-  border: 3px solid rgba(0,0,0,0.7);
+  border: 3px solid rgba(0, 0, 0, 0.7);
   border-radius: 0.5rem;
   letter-spacing: 0.06rem;
   /** För att gömma knappen i mobil läge **/
-  display:none;
+  display: none;
 }
 
 .btn:hover {
@@ -146,7 +151,7 @@ då denna knapp skall användas som nerladdning för pc variant av appen. **/
   padding: 0 1rem 0 0;
 }
 
-.download-app img{
+.download-app img {
   flex-direction: row;
   max-width: 10rem;
   max-height: 4rem;
@@ -182,7 +187,7 @@ då denna knapp skall användas som nerladdning för pc variant av appen. **/
   box-shadow: var(--shadow);
 }
 
-.box-text footer{
+.box-text footer {
   align-self: center;
   text-align: center;
   text-transform: uppercase;
@@ -208,9 +213,9 @@ footer {
 
 /** Ankarlänk för att komma till toppen av sidan, id behövs då istället
 för class.**/
-#to-top{
-  color:var(--white);
-  margin:1rem;
+#to-top {
+  color: var(--white);
+  margin: 1rem;
 }
 
 .partners {
@@ -243,9 +248,8 @@ för class.**/
   margin: 1rem 0rem;
 }
 
-
 /** Design för Contact page**/
-.contact{
+.contact {
   height: 80vh;
   color: var(--white);
   display: flex;
@@ -254,24 +258,25 @@ för class.**/
   align-items: center;
 }
 
-.contact-form{
+.contact-form {
   background: var(--blue);
   border-radius: 1rem;
   text-align: center;
-  padding:2rem;
-  max-width:18rem;
+  padding: 2rem;
+  max-width: 18rem;
 }
 
-.contact-form h4, p{
+.contact-form h4,
+p {
   margin: 1.5rem;
 }
 
 .contact button {
-  display:block;
+  display: block;
 }
 
-form{
-  display:flex;
+form {
+  display: flex;
   flex-direction: column;
   color: var(--white);
   max-width: 40rem;
@@ -308,7 +313,7 @@ form textarea {
     justify-content: center;
   }
 
-/** Styling för sidan index **/
+  /** Styling för sidan index **/
   .box {
     grid-template-columns: 1fr 1fr;
     grid-template-rows: 1fr;
@@ -330,17 +335,17 @@ form textarea {
 
   /** Här vill jag få fram knappen igen för pc nedladdnind
   så kör en display:block för att få fram den **/
-  .btn{
-    display:block;
+  .btn {
+    display: block;
   }
 
   /** Här vill jag få bort app nerladdning så kör en display:none
   för att få bort den **/
   .download-app {
-    display:none;
+    display: none;
   }
 
- /** Vill få till en layout dör varannan box kör row-reverse, 
+  /** Vill få till en layout dör varannan box kör row-reverse, 
  väljer därför att köra varannan genom att vrida på (odd) **/
   .box:nth-child(odd) {
     display: flex;
@@ -348,7 +353,7 @@ form textarea {
     max-height: 100%;
   }
 
-/** För att få till så att bilderna håller sig i rätt storlekar 
+  /** För att få till så att bilderna håller sig i rätt storlekar 
 sätter jag max och min width på 50% **/
   .box:nth-child(odd) .box-image {
     min-width: 50%;
@@ -366,7 +371,7 @@ sätter jag max och min width på 50% **/
     flex-direction: column;
     margin: 1rem 2rem;
     max-width: 34rem;
-    min-width: 10rem;  
+    min-width: 10rem;
   }
 
   /** För att flytta över box(ar) (varannan) till höger **/
@@ -377,16 +382,16 @@ sätter jag max och min width på 50% **/
   }
 
   /** Design för Contact page **/
-  .contact-form{
-    max-width:45rem;
+  .contact-form {
+    max-width: 45rem;
     box-shadow: var(--shadow);
   }
- 
-  /** För att få bilderna responsiva i chrome
+}
+/** För att få bilderna responsiva i chrome
   utan att aspect ratio ändrar storleken automatiskt.
-  Förstör dock i firefox **/
-  @media screen and (-webkit-min-device-pixel-ratio: 0) {
-    .box-image {
-      min-height: 24rem;
-    }
+  Förstör dock i firefox som hellre vill ha min-height. **/
+@media screen and (-webkit-min-device-pixel-ratio: 0) {
+  .box-image {
+    min-height: 24rem;
   }
+}
